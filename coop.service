@@ -1,0 +1,15 @@
+[Unit]
+Description = Coop Door
+
+[Service]
+Type = simple
+WorkingDirectory= /home/pi/CoopDoor
+ExecStart = /usr/bin/python3 -u Controle.py
+Restart = always
+RestartSec = 10
+StandardOutput=syslog
+StandardError=syslog
+
+
+[Install]
+WantedBy=multi-user.target

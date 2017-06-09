@@ -1,0 +1,14 @@
+[Unit]
+
+Description=Node.js
+
+[Service]
+WorkingDirectory= /home/pi/CoopDoor/Server
+ExecStart=/usr/bin/node server.js
+Restart = always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
